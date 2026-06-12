@@ -1,0 +1,19 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cadenry favicon">
+  <title>Cadenry — favicon</title>
+  <desc>32x32 favicon. Slightly thicker stroke weights tuned for small rendering.</desc>
+
+  <rect width="32" height="32" rx="6" fill="#0A0A0F"/>
+
+  <path d="M 22 7 A 9 9 0 1 0 22 25"
+        fill="none"
+        stroke="#FAFAF7"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <polyline points="22.5,16 24,14 25,18.5 26.5,12.5 28,16"
+            fill="none"
+            stroke="#FF5A1F"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+            stroke-linecap="round"/>
+</svg>
