@@ -1,8 +1,7 @@
 # Planarium
 
-Planarium is a local web viewer for `.planning` epic folders. It was extracted
-from the Cadenry planning dashboard so it can run beside any repository without
-becoming part of that repository.
+Planarium is a local web viewer for `.planning` epic folders. It runs beside any
+repository without becoming part of that repository.
 
 ## Run
 
@@ -27,7 +26,7 @@ npx /Users/neo/epic-viewer --root /path/to/workspace
 From GitHub, once this repository is pushed:
 
 ```bash
-npx github:<user-or-org>/epic-viewer --root /path/to/workspace
+npx github:<user-or-org>/planarium --root /path/to/workspace
 ```
 
 Planarium scans downward from the root and includes every nested folder that has

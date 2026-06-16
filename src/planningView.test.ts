@@ -31,7 +31,7 @@ function epic(overrides: Partial<PlanningEpic> = {}): PlanningEpic {
     riskCount: 1,
     summary: "Summary",
     summaryExcerpt: "Dashboard over local planning files",
-    github: { issue: 99, url: "https://github.com/cadenry/cadenry/issues/99", subIssues: 2 },
+    github: { issue: 99, url: "https://github.com/planarium/planarium/issues/99", subIssues: 2 },
     ...overrides,
   };
 }

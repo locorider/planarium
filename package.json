@@ -4,8 +4,7 @@
   "description": "A portable local viewer for .planning epic workspaces.",
   "type": "module",
   "bin": {
-    "planarium": "./dist/cli.js",
-    "epic-viewer": "./dist/cli.js"
+    "planarium": "./dist/cli.js"
   },
   "files": [
     "dist",

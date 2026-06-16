@@ -75,23 +75,6 @@ const SKIPPED_DIRS = new Set([
   "vendor",
 ]);
 
-const CADENRY_AREA_MAP: Record<string, readonly string[]> = {
-  "Lego Architecture": ["EPIC-0022", "EPIC-0023", "EPIC-0024", "EPIC-0026", "EPIC-0027"],
-  "Web & Marketing": ["EPIC-0011", "EPIC-0012", "EPIC-0019", "EPIC-0025", "EPIC-0028", "EPIC-0029"],
-  "Platform & Access": ["EPIC-0014", "EPIC-0015", "EPIC-0018"],
-  Infrastructure: ["EPIC-0017", "EPIC-0021"],
-  "Billing & Distribution": ["EPIC-0016", "EPIC-0020"],
-};
-
-const CADENRY_AREA_DESC: Record<string, string> = {
-  "Lego Architecture": "Entity-composition core, type system, generation, migrations.",
-  "Web & Marketing": "Frontend app, landing, legal surface, rebrand, web tooling.",
-  "Platform & Access": "Backend correctness, repository scope, authentication, extraction.",
-  Infrastructure: "Cost discipline and portable deployment.",
-  "Billing & Distribution": "Credits, billing UX, and outbound distribution connectors.",
-  Unsorted: "Epics not yet assigned to a GitHub milestone area.",
-};
-
 function readText(path: string): string {
   return existsSync(path) ? readFileSync(path, "utf8") : "";
 }
@@ -519,9 +502,6 @@ function areaOf(workspace: WorkspaceContext, id: string, yaml: string): string {
   if (configured) {
     return configured;
   }
-  if (workspace.ledger.repo === "cadenry/cadenry") {
-    return configuredArea(id, CADENRY_AREA_MAP) ?? "Unsorted";
-  }
   return "Unsorted";
 }
 
@@ -531,9 +511,6 @@ function areaDescription(workspaces: WorkspaceContext[], area: string): string {
     if (description) {
       return description;
     }
-  }
-  if (workspaces.some((workspace) => workspace.ledger.repo === "cadenry/cadenry")) {
-    return CADENRY_AREA_DESC[area] ?? "Project area.";
   }
   return area === "Unsorted" ? "Epics not assigned to an area." : "Project area.";
 }
